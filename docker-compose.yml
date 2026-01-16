@@ -1,12 +1,14 @@
 version: '3'
 services:
-  web:
-    # 👇 对应你 GitHub Action 里的 tags
+  deeplink-monitor:
     image: 18879011721/next-ssr-app:latest
     container_name: next-ssr-server
     restart: always
     ports:
-      # ✅ 左边是服务器端口，右边是容器端口 (都在 Dockerfile 里定死了 4007)
       - '4007:4007'
     environment:
       - TZ=Asia/Shanghai
+      # ❌ 错误写法: mongodb://localhost:27017/...
+      # ✅ 正确写法: 使用服务器 IP 192.238.204.152
+      - MONGODB_URI=mongodb://192.238.204.152:27017/deeplink-monitor
+      # 如果有密码，格式为: mongodb://账号:密码@192.238.204.152:27017/deeplink-monitor?authSource=admin
