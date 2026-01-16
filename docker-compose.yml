@@ -3,15 +3,21 @@ services:
   deeplink-monitor:
     image: 18879011721/next-ssr-app:latest
     container_name: next-ssr-server
-    restart: always
-    # ❌ 删除 ports 映射
-    # ports:
-    #   - "4007:4007"
-
-    # ✅ 加上这一行，直接使用宿主机网络
-    network_mode: 'host'
-
+    restart: unless-stopped
+    ports:
+      # 左边宿主机端口 : 右边容器端口 (Dockerfile里我们定死了4007)
+      - '4007:4007'
+    networks:
+      # ✅ 加入你现有的网络，这样它就能和 postgres/mongo 容器互通了
+      - degpt-network
     environment:
       - TZ=Asia/Shanghai
-      # ✅ 现在你可以直接用 localhost 了！
-      - MONGODB_URI=mongodb://localhost:27017/deeplink-monitor
+      - HOSTNAME=0.0.0.0
+      - PORT=4007
+      # 👇 数据库连接 (下面详细解释)
+      - MONGODB_URI=mongodb://192.238.204.152:27017/deeplink-monitor
+
+# 声明这是一个外部已经存在的网络
+networks:
+  degpt-network:
+    external: true

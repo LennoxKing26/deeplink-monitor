@@ -4,16 +4,20 @@ import { Log } from '@/models/Log';
 
 export const dynamic = 'force-dynamic';
 
-// CORS 配置
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+// CORS 配置 - 动态获取 origin
+const getCorsHeaders = (request?: NextRequest) => {
+  const origin = request?.headers.get('origin') || '*';
+  return {
+    'Access-Control-Allow-Origin': origin,
+    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    'Access-Control-Allow-Credentials': 'true',
+  };
 };
 
 // 处理 OPTIONS 预检请求
-export async function OPTIONS() {
-  return NextResponse.json({}, { headers: corsHeaders });
+export async function OPTIONS(request: NextRequest) {
+  return NextResponse.json({}, { headers: getCorsHeaders(request) });
 }
 
 export async function POST(request: NextRequest) {
@@ -46,9 +50,12 @@ export async function POST(request: NextRequest) {
 
     const log = await Log.create({ ...body, location });
 
-    return NextResponse.json({ success: true, id: log._id }, { status: 201, headers: corsHeaders });
+    return NextResponse.json({ success: true, id: log._id }, { status: 201, headers: getCorsHeaders(request) });
   } catch (error) {
     console.error('Report error:', error);
-    return NextResponse.json({ success: false, error: 'Failed to save log' }, { status: 500, headers: corsHeaders });
+    return NextResponse.json(
+      { success: false, error: 'Failed to save log' },
+      { status: 500, headers: getCorsHeaders(request) }
+    );
   }
 }
