@@ -1,6 +1,7 @@
 version: '3'
 services:
   web:
+    # 👇 你的镜像名
     image: your-dockerhub-name/next-ssr-app:latest
     container_name: next-ssr-server
     restart: always
