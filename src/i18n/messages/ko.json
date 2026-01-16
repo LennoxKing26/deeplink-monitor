@@ -1,0 +1,61 @@
+{
+  "header": {
+    "title": "DeepLink 모니터"
+  },
+  "stats": {
+    "totalErrors": "총 오류",
+    "apiErrors": "API 오류",
+    "remoteErrors": "원격 연결 오류"
+  },
+  "toolbar": {
+    "search": "device_id, wallet, message 검색...",
+    "autoRefresh": "자동 새로고침",
+    "refresh": "새로고침"
+  },
+  "table": {
+    "type": "유형",
+    "message": "오류 메시지",
+    "wallet": "지갑 주소",
+    "deviceId": "장치 ID",
+    "location": "위치",
+    "network": "네트워크",
+    "time": "시간",
+    "action": "작업",
+    "noLogs": "로그가 없습니다",
+    "apiError": "API 오류",
+    "rtcError": "원격 연결 오류",
+    "remoteError": "원격 연결 오류",
+    "codeError": "프론트엔드 내부 오류",
+    "viewDetail": "상세보기",
+    "viewDetailTip": "오류 세부 정보 및 매개변수 보기",
+    "copied": "복사됨!",
+    "clickToCopy": "클릭하여 복사"
+  },
+  "detail": {
+    "message": "오류 메시지",
+    "environment": "환경",
+    "errorPage": "오류 발생 페이지",
+    "location": "위치",
+    "networkStatus": "네트워크 상태",
+    "network": "네트워크",
+    "online": "온라인",
+    "offline": "오프라인",
+    "latency": "지연 시간",
+    "deviceInfo": "장치 ID",
+    "connectParams": "연결 매개변수 (인증 디버그)",
+    "rawParams": "원시 매개변수",
+    "stackTrace": "스택 추적",
+    "userAgent": "사용자 에이전트"
+  },
+  "pagination": {
+    "page": "{total} 페이지 중 {current} 페이지"
+  },
+  "theme": {
+    "system": "시스템",
+    "light": "라이트 모드",
+    "dark": "다크 모드"
+  },
+  "language": {
+    "select": "언어"
+  }
+}

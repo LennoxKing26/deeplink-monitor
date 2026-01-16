@@ -1,0 +1,61 @@
+{
+  "header": {
+    "title": "DeepLink Monitor"
+  },
+  "stats": {
+    "totalErrors": "Total Errors",
+    "apiErrors": "API Errors",
+    "remoteErrors": "Remote Connection Errors"
+  },
+  "toolbar": {
+    "search": "Search device_id, wallet, message...",
+    "autoRefresh": "Auto Refresh",
+    "refresh": "Refresh"
+  },
+  "table": {
+    "type": "Type",
+    "message": "Error Message",
+    "wallet": "Wallet",
+    "deviceId": "Device ID",
+    "location": "Location",
+    "network": "Network",
+    "time": "Time",
+    "action": "Action",
+    "noLogs": "No logs found",
+    "apiError": "API Error",
+    "rtcError": "RTC Error",
+    "remoteError": "Remote Connection",
+    "codeError": "Frontend Internal Error",
+    "viewDetail": "Details",
+    "viewDetailTip": "View error details and parameters",
+    "copied": "Copied!",
+    "clickToCopy": "Click to copy"
+  },
+  "detail": {
+    "message": "Error Message",
+    "environment": "Environment",
+    "errorPage": "Error Page",
+    "location": "Location",
+    "networkStatus": "Network Status",
+    "network": "Network",
+    "online": "Online",
+    "offline": "Offline",
+    "latency": "Latency",
+    "deviceInfo": "Device ID",
+    "connectParams": "Connect Parameters (Auth Debug)",
+    "rawParams": "Raw Parameters",
+    "stackTrace": "Stack Trace",
+    "userAgent": "User Agent"
+  },
+  "pagination": {
+    "page": "Page {current} of {total}"
+  },
+  "theme": {
+    "system": "System",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "language": {
+    "select": "Language"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "header": {
+    "title": "DeepLink 监控"
+  },
+  "stats": {
+    "totalErrors": "总错误数",
+    "apiErrors": "接口错误",
+    "remoteErrors": "远程连接错误"
+  },
+  "toolbar": {
+    "search": "搜索 device_id, wallet, message...",
+    "autoRefresh": "自动刷新",
+    "refresh": "刷新"
+  },
+  "table": {
+    "type": "类型",
+    "message": "错误消息",
+    "wallet": "钱包地址",
+    "deviceId": "设备 ID",
+    "location": "地域",
+    "network": "网络",
+    "time": "时间",
+    "action": "操作",
+    "noLogs": "暂无日志",
+    "apiError": "接口错误",
+    "rtcError": "远程连接错误",
+    "remoteError": "远程连接错误",
+    "codeError": "前端服务内部错误",
+    "viewDetail": "查看详情",
+    "viewDetailTip": "查看错误详情和参数",
+    "copied": "已复制!",
+    "clickToCopy": "点击复制"
+  },
+  "detail": {
+    "message": "错误消息",
+    "environment": "环境信息",
+    "errorPage": "发生错误的页面",
+    "location": "所在地域",
+    "networkStatus": "网络状态",
+    "network": "网络",
+    "online": "在线",
+    "offline": "离线",
+    "latency": "延迟",
+    "deviceInfo": "设备 ID",
+    "connectParams": "连接参数 (鉴权调试)",
+    "rawParams": "原始参数",
+    "stackTrace": "堆栈信息",
+    "userAgent": "用户代理"
+  },
+  "pagination": {
+    "page": "第 {current} 页，共 {total} 页"
+  },
+  "theme": {
+    "system": "跟随系统",
+    "light": "浅色模式",
+    "dark": "深色模式"
+  },
+  "language": {
+    "select": "语言"
+  }
+}
