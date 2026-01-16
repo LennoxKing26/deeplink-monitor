@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/deeplink-monitor';
+// ✅ 因为开启了 Host 模式，容器里的 localhost 就是服务器的 localhost
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/deeplink-monitor';
 
 interface GlobalMongoose {
   conn: typeof mongoose | null;
